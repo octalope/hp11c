@@ -1,0 +1,129 @@
+$bg: #494742;
+$text: #fff;
+$blue: #2E86C1;
+$orange: orange;
+$topButton: #4D5656;
+$bottomButton: rgb(63, 69, 77);
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.display {
+  height: 12vw;
+  vertical-align: middle;
+  text-align: right;
+  font-family: lato;
+  font-weight: bold;
+  background-color: silver;
+  margin: 1vw;
+  padding-left: 15vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  padding-right: 24vw;
+}
+
+.bezel {
+  background-color: rgb(76, 85, 85);
+  border-radius: 1.25vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.lcd {
+  background-color: rgb(129, 151, 144);
+  padding: 1vw;
+  border-radius: 1.25vw;
+  vertical-align: middle;
+  text-align: left;
+  font-family: lato;
+  font-weight: bold;
+  font-size: 6vw;
+  color: black;
+}
+
+.case {
+  margin: 1vw;
+}
+
+.keypad {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr 2fr);
+  grid-template-columns: repeat(10, 1fr);
+  border: solid white;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-right: 0vw;
+  margin: 1vw;
+}
+
+.box {
+  text-align: center;
+  font-family: lato;
+  font-weight: bold;
+  border-radius: 1vw;
+  padding: .3vw;
+  width: 6vw;
+  font-size: 2.25vw;
+}
+
+.top {
+  height: 3vw;
+}
+
+.bottom {
+  height: 2vw;
+  color: $blue;
+  background-color: $bottomButton;
+  padding: .1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  font-size: 1.75vw;
+}
+
+.doubleHeight {
+  grid-row: span 3;
+}
+
+.gray {
+  color: white;
+  background: $topButton;
+  border: solid black;
+}
+
+.orange {
+  color: black;
+  background: $orange;
+  border: solid black;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blue {
+  color: black;
+  background: $blue;
+  border: solid black;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.orangeLabel {
+  font-size: 1.75vw;
+
+  text-align: bottom;
+  color: $orange;
+  background: $bg;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
