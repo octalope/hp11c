@@ -62,6 +62,17 @@ body {
   margin: 1vw;
 }
 
+.orangeLabel {
+  font-size: 1.75vw;
+  vertical-align: bottom;
+  color: $orange;
+  background: $bg;
+  text-align: center;
+  font-family: lato;
+  padding-top: 1vw;
+  width: 8vw;
+}
+
 .box {
   text-align: center;
   font-family: lato;
@@ -70,6 +81,7 @@ body {
   padding: .3vw;
   width: 6vw;
   font-size: 2.25vw;
+  margin-bottom: 0.5vw;
 }
 
 .top {
@@ -86,14 +98,42 @@ body {
   font-size: 1.75vw;
 }
 
+.doubleTop {
+  height: 13.5vw;
+}
+
 .doubleHeight {
   grid-row: span 3;
 }
+
+.doubleBottom {
+  height: 2vw;
+  color: $blue;
+  background-color: $bottomButton;
+  padding: .1vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  font-size: 1.75vw;
+}
+
 
 .gray {
   color: white;
   background: $topButton;
   border: solid black;
+  box-shadow: 0 0.25vw black;
+  cursor: pointer;
+  position: relative;
+}
+
+.gray:hover {
+  box-shadow: 0 0.05vw black;
+  top: 0.05vw;
+}
+
+.gray:active {
+  box-shadow: none;
+  top: 0.25vw;
 }
 
 .orange {
@@ -104,6 +144,19 @@ body {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 0 0.25vw black;
+  cursor: pointer;
+  position: relative;
+}
+
+.orange:hover {
+  box-shadow: 0 0.05vw black;
+  top: 0.05vw;
+}
+
+.orange:active {
+  box-shadow: none;
+  top: 0.25vw;
 }
 
 .blue {
@@ -114,16 +167,18 @@ body {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 0 0.25vw black;
+  cursor: pointer;
+  position: relative;
 }
 
-.orangeLabel {
-  font-size: 1.75vw;
-
-  text-align: bottom;
-  color: $orange;
-  background: $bg;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: flex-end;
+.blue:hover {
+  box-shadow: 0 0.05vw black;
+  top: 0.05vw;
 }
+
+.blue:active {
+  box-shadow: none;
+  top: 0.25vw;
+}
+
