@@ -1,21 +1,31 @@
 {
   "name": "hp11c",
   "version": "1.0.0",
-  "description": "",
+  "description": "A JS implementation of the HP 11c RPN calculator",
   "scripts": {
     "build": "parcel build src/index.html",
     "clean": "rm -rf dist/",
-    "start": "parcel src/index.html --open"
+    "start": "parcel src/index.html --open",
+    "lint": "eslint \"**/*.js\"",
+    "test": "npm run test:coverage && npm run lint",
+    "test:coverage": "nyc --reporter=lcov mocha --config ./.mocharc.json ./src/test && nyc report",
+    "test:dev": "mocha --config ./.mocharc.json ./src/test --watch",
+    "docker:build": "docker rmi rpn:latest || true && docker build -t rpn:latest .",
+    "docker:run": "docker run -d --rm -p 80:80 --name rpn rpn:latest",
+    "docker:kill": "docker kill rpn && docker rmi rpn:latest"
   },
-  "author": "",
+  "author": "steve.c.brooks@gmail.com",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://gitlab.com/sbrooks/hp11c"
   },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.25.1-test.1"
   }
